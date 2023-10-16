@@ -1,0 +1,215 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+.progress-bar {
+    height: 8px;
+    background: #aa4604;
+    width: 0%;
+  }
+h1{
+    color: white;
+    text-align: center;
+}
+.item-quote{
+    grid-area: quote;
+    font-size: 50px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 700px;
+}
+.item-experience{
+    grid-area: experience;
+    width: 220px;
+    background-color: coral;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.item-headername{
+    grid-area: headername;
+    margin-left:280px;
+}
+.item-projects {
+    grid-area: projects;
+    width: 220px;
+    background-color: rgb(244, 62, 110);
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.item-certificates{
+    grid-area: certificates;
+    width: 220px;
+    background-color: #3eb489;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.item-img{
+    grid-area: img;
+    padding-top: 60px;
+}
+.item-skills{
+    grid-area: skills;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.item-company{
+    grid-area: company;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.item-gif{
+    grid-area: gif;
+}
+.item-logos{grid-area:logo ;}
+
+.grid-container{
+    padding: 100px 0;
+    margin: 100px auto 0 auto;
+    display: grid;
+    grid-template-areas: 
+    'quote quote quote headername headername headername'
+    'quote quote quote img img company'
+    'quote quote quote img img skills'
+    'quote quote quote img img gif'
+    'experience projects certificates img img gif'
+    'experience projects certificates img img logo';
+    gap: 10px;
+    padding: 10px;
+}
+.grid-container > div {
+    color: white;
+  }
+.linkedIN{
+    background-color: #0A66C2;
+    border: 2px solid #0A66C2;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.github{
+    background-color: green;
+    border: 2px solid green;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.Download{
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.linkedIN:hover{
+    background-color: transparent;
+    color: white;
+}
+.github:hover{
+    background-color: transparent;
+    color: white;
+}
+.Download:hover{
+    background-color: transparent;
+    color: white;
+}
+.component-two{
+    color: white;
+}
+.item-certificates:hover{
+    background-color: transparent;
+    border: 2px solid #3eb489;
+}
+.item-experience:hover{
+    background-color: transparent;
+    border: 2px solid coral;
+}
+.item-projects:hover{
+    background-color: transparent;
+    border: 2px solid rgb(244, 62, 110);
+}
+.heading{
+    text-align: center;
+}
+footer{
+    color: white;
+    text-align: center;
+}
+.box{
+    background-color: aliceblue;
+    height: 1px;
+    width: auto;
+}
+/* down arrow*/
+.down-arrow {
+    position: absolute;
+    top: calc(95vh - 60px);
+    left: calc(50% - 14px);
+    color: aliceblue;
+  }
+
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 50px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  .down-arrow {
+     /* rest of the styles from above */
+    animation: jumpInfinite 1.5s infinite;
+  }
+/* scroll transitions */
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100px);
+    filter: blur(5px);
+}
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
+
