@@ -146,6 +146,7 @@ h1{
 }
 .component-two{
     color: white;
+    margin-top: 2rem;
 }
 .item-certificates:hover{
     background-color: transparent;
@@ -210,6 +211,93 @@ footer{
 @media(prefers-reduced-motion) {
     .hidden{
         transition: none;
+    }
+}
+
+/* for mobile view */
+/* Existing styles remain unchanged */
+
+/* Add a media query for typical mobile view */
+@media (max-width: 768px) {
+    .header {
+        width: 100%; /* Make the header full width */
+        text-align: center;
+    }
+
+    .progress-container, .progress-bar {
+        width: 100%; /* Make the progress bar full width */
+    }
+
+    .item-quote {
+        width: 100%; /* Make the quote full width */
+        font-size: 2rem; /* Reduce font size for the quote */
+    }
+
+    .item-experience, .item-projects, .item-certificates {
+        width: 100%; /* Make experience, projects, and certificates full width */
+        font-size: 1.5rem; /* Reduce font size for these items */
+    }
+
+    .item-headername {
+        margin-left: 0; /* Remove the left margin for headername */
+    }
+
+    .item-projects, .item-certificates {
+        background-color: transparent; /* Remove background color */
+        font-weight: normal; /* Remove font weight */
+        border-radius: 0; /* Remove border radius */
+        cursor: auto; /* Remove pointer cursor */
+    }
+
+    .item-img {
+        padding-top: 2rem; /* Reduce padding */
+    }
+
+    .item-skills, .item-company, .item-gif, .item-logos {
+        width: 100%; /* Make these items full width */
+    }
+
+    .linkedIN, .github, .Download {
+        width: 100%; /* Make these buttons full width */
+        height: 3rem; /* Increase button height */
+        margin-bottom: 1rem; /* Add margin between buttons */
+    }
+
+    /* Remove hover styles for items */
+    .item-certificates:hover, .item-experience:hover, .item-projects:hover {
+        background-color: transparent;
+        border: 0;
+    }
+
+    .down-arrow {
+        top: calc(10rem - 2rem); /* Adjust position of the down arrow */
+        left: calc(50% - 1rem);
+    }
+
+    /* Add styles for hidden and show classes */
+    .hidden {
+        opacity: 0;
+        transform: translateX(0); /* Adjust transform for hidden elements */
+    }
+
+    .show {
+        opacity: 1;
+        transform: translateX(0); /* Adjust transform for shown elements */
+    }
+
+    /* Define the styles for component-two for mobile */
+    .component-two {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    /* Adjust the footer for mobile */
+    footer {
+        font-size: 1.2rem; /* Reduce font size */
+    }
+
+    /* Add styles for the horizontal line */
+    .box {
+        display: none; /* Hide the horizontal line on mobile */
     }
 }
 
