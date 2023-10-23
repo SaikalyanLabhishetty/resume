@@ -16,12 +16,12 @@ body{
 }
 .progress-container {
     width: 100%;
-    height: 8px;
+    height: 0.5rem;
     background: #ccc;
   }
   
 .progress-bar {
-    height: 8px;
+    height: 0.5rem;
     background: #aa4604;
     width: 0%;
   }
@@ -31,52 +31,52 @@ h1{
 }
 .item-quote{
     grid-area: quote;
-    font-size: 50px;
+    font-size: 3rem;
     background-color: transparent;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 700px;
+    width: 43.75rem;
 }
 .item-experience{
     grid-area: experience;
-    width: 220px;
+    width: 13.75rem;
     background-color: coral;
-    font-size: 30px;
+    font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 1.2rem;
     cursor: pointer;
 }
 .item-headername{
     grid-area: headername;
-    margin-left:280px;
+    margin-left:17.5rem;
 }
 .item-projects {
     grid-area: projects;
-    width: 220px;
+    width: 13.75rem;
     background-color: rgb(244, 62, 110);
-    font-size: 30px;
+    font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 1.2rem;
     cursor: pointer;
 }
 .item-certificates{
     grid-area: certificates;
-    width: 220px;
+    width: 13.75rem;
     background-color: #3eb489;
-    font-size: 30px;
+    font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 1.2rem;
     cursor: pointer;
 }
 .item-img{
     grid-area: img;
-    padding-top: 60px;
+    padding-top: 4rem;
 }
 .item-skills{
     grid-area: skills;
@@ -92,8 +92,8 @@ h1{
 .item-logos{grid-area:logo ;}
 
 .grid-container{
-    padding: 100px 0;
-    margin: 100px auto 0 auto;
+    padding: 5.3rem 0;
+    margin: 5.3rem auto 0 auto;
     display: grid;
     grid-template-areas: 
     'quote quote quote headername headername headername'
@@ -102,35 +102,35 @@ h1{
     'quote quote quote img img gif'
     'experience projects certificates img img gif'
     'experience projects certificates img img logo';
-    gap: 10px;
-    padding: 10px;
+    gap: 0.7rem;
+    padding: 0.7rem;
 }
 .grid-container > div {
     color: white;
   }
 .linkedIN{
     background-color: #0A66C2;
-    border: 2px solid #0A66C2;
+    border: 0.1rem solid #0A66C2;
     color: white;
-    height: 30px;
+    height: 2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.25rem;
 }
 .github{
     background-color: green;
-    border: 2px solid green;
+    border: 0.1rem solid green;
     color: white;
-    height: 30px;
+    height: 2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.25rem;
 }
 .Download{
     background-color: red;
-    border: 2px solid red;
+    border: 0.1rem solid red;
     color: white;
-    height: 30px;
+    height: 2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.25rem;
 }
 .linkedIN:hover{
     background-color: transparent;
@@ -149,15 +149,15 @@ h1{
 }
 .item-certificates:hover{
     background-color: transparent;
-    border: 2px solid #3eb489;
+    border: 0.1rem solid #3eb489;
 }
 .item-experience:hover{
     background-color: transparent;
-    border: 2px solid coral;
+    border: 0.1rem solid coral;
 }
 .item-projects:hover{
     background-color: transparent;
-    border: 2px solid rgb(244, 62, 110);
+    border: 0.1rem solid rgb(244, 62, 110);
 }
 .heading{
     text-align: center;
@@ -168,14 +168,14 @@ footer{
 }
 .box{
     background-color: aliceblue;
-    height: 1px;
+    height: 0.1rem;
     width: auto;
 }
 /* down arrow*/
 .down-arrow {
     position: absolute;
-    top: calc(95vh - 60px);
-    left: calc(50% - 14px);
+    top: calc(6rem - 4rem);
+    left: calc(50% - 1rem);
     color: aliceblue;
   }
 
@@ -184,7 +184,7 @@ footer{
       margin-top: 0;
     }
     50% {
-      margin-top: 50px;
+      margin-top: 2rem;
     }
     100% {
       margin-top: 0;
@@ -198,7 +198,7 @@ footer{
 .hidden{
     opacity: 0;
     transition: all 1s;
-    transform: translateX(-100px);
+    transform: translateX(-5.3rem);
     filter: blur(5px);
 }
 .show{
