@@ -10,12 +10,12 @@ body{
     position: fixed;
     top: 0;
     z-index: 1;
-    width: 100%;
+    width: 81rem;
     text-align: center;
     background-color: black;
 }
 .progress-container {
-    width: 100%;
+    width: 81rem;
     height: 0.5rem;
     background: #ccc;
   }
@@ -174,8 +174,8 @@ footer{
 /* down arrow*/
 .down-arrow {
     position: absolute;
-    top: calc(6rem - 4rem);
-    left: calc(50% - 1rem);
+    top: calc(35rem - 4rem);
+    left: calc(40rem - 1rem);
     color: aliceblue;
   }
 
@@ -199,12 +199,12 @@ footer{
     opacity: 0;
     transition: all 1s;
     transform: translateX(-5.3rem);
-    filter: blur(5px);
+    filter: blur(0.2rem);
 }
 .show{
     opacity: 1;
-    filter: blur(0px);
-    transform: translateX(0px);
+    filter: blur(0rem);
+    transform: translateX(0rem);
 }
 
 @media(prefers-reduced-motion) {
