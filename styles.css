@@ -176,7 +176,7 @@ footer{
 }
 .box{
     background-color: aliceblue;
-    height: 0.1rem;
+    height: 0.3rem;
     width: auto;
 }
 /* down arrow*/
@@ -280,7 +280,7 @@ footer{
 
   .mysql{
     animation: mysqlProgress 3s ease-in-out forwards; 
-    background-color: #96a00e;
+    background-color: #b4449e;
   }
 
   .ct{
