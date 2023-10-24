@@ -30,7 +30,7 @@ h1{
     text-align: center;
 }
 .item-quote{
-    grid-area: quote;
+    grid-area: image;
     font-size: 3rem;
     background-color: transparent;
     color: white;
@@ -50,7 +50,6 @@ h1{
 }
 .item-headername{
     grid-area: headername;
-    margin-left:17.5rem;
 }
 .item-projects {
     grid-area: projects;
@@ -74,10 +73,9 @@ h1{
     border-radius: 1.2rem;
     cursor: pointer;
 }
-.item-img{
+/* .item-img{
     grid-area: img;
-    padding-top: 4rem;
-}
+} */
 .item-skills{
     grid-area: skills;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -86,25 +84,34 @@ h1{
     grid-area: company;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.item-gif{
-    grid-area: gif;
+.item-skillsbar{
+    grid-area: skillsbar;
+    width: auto;
+
 }
-.item-logos{grid-area:logo ;}
+.item-logos{
+    grid-area:logo ;
+
+}
 
 .grid-container{
-    padding: 5.3rem 0;
+    padding: 1rem;
     margin: 5.3rem auto 0 auto;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
     grid-template-areas: 
-    'quote quote quote headername headername headername'
-    'quote quote quote img img company'
-    'quote quote quote img img skills'
-    'quote quote quote img img gif'
-    'experience projects certificates img img gif'
-    'experience projects certificates img img logo';
+    'image image image skillsbar skillsbar skillsbar'
+    'image image image skillsbar skillsbar skillsbar'
+    'image image image skillsbar skillsbar skillsbar'
+    'headername headername headername skillsbar skillsbar skillsbar'
+    'company company company skillsbar skillsbar skillsbar'
+    'skills skills skills skillsbar skillsbar skillsbar'
+    'logo logo logo skillsbar skillsbar skillsbar'
+    'experience projects certificates skillsbar skillsbar skillsbar'
+    'experience projects certificates skillsbar skillsbar skillsbar';
     gap: 0.7rem;
-    padding: 0.7rem;
 }
+
 .grid-container > div {
     color: white;
   }
@@ -175,7 +182,7 @@ footer{
 /* down arrow*/
 .down-arrow {
     position: absolute;
-    top: calc(35rem - 4rem);
+    top: calc(50rem - 4rem);
     left: calc(40rem - 1rem);
     color: aliceblue;
   }
@@ -214,90 +221,72 @@ footer{
     }
 }
 
-/* for mobile view */
-/* Existing styles remain unchanged */
+/* skills bar */
+@keyframes javaProgress {
+    from { width: 0; } 
+    to { width: 70%; } 
+  }
+  
+  @keyframes webProgress {
+    from { width: 0; }
+    to { width: 70%; }
+  }
+  
+  @keyframes jsProgress {
+    from { width: 0; }
+    to { width: 60%; }
+  }
+  
+  @keyframes mysqlProgress {
+    from { width: 0; }
+    to { width: 70%; }
+  }
 
-/* Add a media query for typical mobile view */
-@media (max-width: 768px) {
-    .header {
-        width: 100%; /* Make the header full width */
-        text-align: center;
-    }
+  @keyframes ctProgress {
+    from { width: 0; }
+    to { width: 65%; }
+  }
+  
+  /* Define animations for other skills here */
+  
+  .container {
+    width: 100%;
+    background-color: #ddd;
+  }
+  
+  .skills {
+    text-align: right;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    color: white;
+    width: 0; 
+    animation: progress 3s ease-in-out forwards; 
+  }
+  
+  .java {
+    animation: javaProgress 3s ease-in-out forwards; 
+    background-color: #04AA6D;
+  }
+  
+  .web {
+    animation: webProgress 3s ease-in-out forwards; 
+    background-color: #2196F3;
+  }
+  
+  .js {
+    animation: jsProgress 3s ease-in-out forwards; 
+    background-color: #f48b36;
+  }
 
-    .progress-container, .progress-bar {
-        width: 100%; /* Make the progress bar full width */
-    }
+  .mysql{
+    animation: mysqlProgress 3s ease-in-out forwards; 
+    background-color: #96a00e;
+  }
 
-    .item-quote {
-        width: 100%; /* Make the quote full width */
-        font-size: 2rem; /* Reduce font size for the quote */
-    }
-
-    .item-experience, .item-projects, .item-certificates {
-        width: 100%; /* Make experience, projects, and certificates full width */
-        font-size: 1.5rem; /* Reduce font size for these items */
-    }
-
-    .item-headername {
-        margin-left: 0; /* Remove the left margin for headername */
-    }
-
-    .item-projects, .item-certificates {
-        background-color: transparent; /* Remove background color */
-        font-weight: normal; /* Remove font weight */
-        border-radius: 0; /* Remove border radius */
-        cursor: auto; /* Remove pointer cursor */
-    }
-
-    .item-img {
-        padding-top: 2rem; /* Reduce padding */
-    }
-
-    .item-skills, .item-company, .item-gif, .item-logos {
-        width: 100%; /* Make these items full width */
-    }
-
-    .linkedIN, .github, .Download {
-        width: 100%; /* Make these buttons full width */
-        height: 3rem; /* Increase button height */
-        margin-bottom: 1rem; /* Add margin between buttons */
-    }
-
-    /* Remove hover styles for items */
-    .item-certificates:hover, .item-experience:hover, .item-projects:hover {
-        background-color: transparent;
-        border: 0;
-    }
-
-    .down-arrow {
-        top: calc(10rem - 2rem); /* Adjust position of the down arrow */
-        left: calc(50% - 1rem);
-    }
-
-    /* Add styles for hidden and show classes */
-    .hidden {
-        opacity: 0;
-        transform: translateX(0); /* Adjust transform for hidden elements */
-    }
-
-    .show {
-        opacity: 1;
-        transform: translateX(0); /* Adjust transform for shown elements */
-    }
-
-    /* Define the styles for component-two for mobile */
-    .component-two {
-        font-size: 1.5rem; /* Reduce font size */
-    }
-
-    /* Adjust the footer for mobile */
-    footer {
-        font-size: 1.2rem; /* Reduce font size */
-    }
-
-    /* Add styles for the horizontal line */
-    .box {
-        display: none; /* Hide the horizontal line on mobile */
-    }
-}
-
+  .ct{
+    animation: ctProgress 3s ease-in-out forwards; 
+    background-color: #ed515b;
+  }
+  
+  
+  
