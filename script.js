@@ -8,11 +8,11 @@ function openGithubProfile() {
 
 
 function Downloadresume() {
-    const resumeUrl = 'https://drive.google.com/file/d/1hNzoo7UR7i1y5iJ3w8rbu2-OSftiZWRU/view?usp=sharing';
+    const resumeUrl = 'https://drive.google.com/file/d/1XApO5kWB6IMh9loWicCbppMuV67RW3SX/view?usp=sharing';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.target = '_blank'; 
-    link.download = 'kalyan-Resume.pdf'; 
+    link.download = 'Saikalyan-Resume.pdf'; 
     link.click();
 }
 //Scroll animation
@@ -69,3 +69,6 @@ function smoothScroll(target) {
         });
     }
 }
+
+
+
