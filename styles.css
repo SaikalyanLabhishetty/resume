@@ -116,39 +116,39 @@ h1{
     color: white;
   }
 .linkedIN{
-    background-color: #0A66C2;
-    border: 0.1rem solid #0A66C2;
+    background-color: transparent;
+    border: 0.2rem solid #0A66C2;
     color: white;
     height: 2rem;
     cursor: pointer;
     border-radius: 0.25rem;
 }
 .github{
-    background-color: green;
-    border: 0.1rem solid green;
+    background-color: transparent;
+    border: 0.2rem solid green;
     color: white;
     height: 2rem;
     cursor: pointer;
     border-radius: 0.25rem;
 }
 .Download{
-    background-color: red;
-    border: 0.1rem solid red;
+    background-color: transparent;
+    border: 0.2rem solid red;
     color: white;
     height: 2rem;
     cursor: pointer;
     border-radius: 0.25rem;
 }
 .linkedIN:hover{
-    background-color: transparent;
+    background-color: #0A66C2;
     color: white;
 }
 .github:hover{
-    background-color: transparent;
+    background-color: green;
     color: white;
 }
 .Download:hover{
-    background-color: transparent;
+    background-color: red;
     color: white;
 }
 .component-two{
@@ -224,7 +224,7 @@ footer{
 /* skills bar */
 @keyframes javaProgress {
     from { width: 0; } 
-    to { width: 75%; } 
+    to { width: 70%; } 
   }
   
   @keyframes webProgress {
@@ -234,7 +234,7 @@ footer{
   
   @keyframes jsProgress {
     from { width: 0; }
-    to { width: 65%; }
+    to { width: 60%; }
   }
   
   @keyframes mysqlProgress {
@@ -265,28 +265,53 @@ footer{
   
   .java {
     animation: javaProgress 3s ease-in-out forwards; 
-    background-color: #04AA6D;
+    background: linear-gradient(45deg,
+    rgb(1, 255, 1) 0%,
+    rgb(0, 209, 0) 25%,
+    rgb(0, 173, 0) 50%,
+    rgb(0, 158, 0) 75%,
+    rgb(0, 125, 0) 100%);
   }
   
   .web {
     animation: webProgress 3s ease-in-out forwards; 
-    background-color: #2196F3;
+    background: linear-gradient(45deg,
+    rgb(1, 120, 255) 0%,
+    rgb(1, 101, 214) 25%,
+    rgb(1, 80, 171) 50%,
+    rgb(0, 72, 153) 75%,
+    rgb(0, 55, 118) 100%);
   }
+  
   
   .js {
     animation: jsProgress 3s ease-in-out forwards; 
-    background-color: #f48b36;
+    background: linear-gradient(45deg,
+    rgb(255, 183, 0) 0%,
+    rgb(218, 156, 0) 25%,
+    rgb(192, 138, 0) 50%,
+    rgb(159, 114, 0) 75%,
+    rgb(141, 101, 0) 100%);
   }
-
+  
   .mysql{
     animation: mysqlProgress 3s ease-in-out forwards; 
-    background-color: #b4449e;
+    background: linear-gradient(45deg,
+    rgb(251, 129, 255) 0%,
+    rgb(250, 109, 255) 25%,
+    rgb(249, 79, 255) 50%,
+    rgb(248, 31, 255) 75%,
+    rgb(195, 0, 201) 100%);
   }
 
   .ct{
     animation: ctProgress 3s ease-in-out forwards; 
-    background-color: #ed515b;
+    background: linear-gradient(45deg,
+    rgb(255, 95, 95) 0%,
+    rgb(255, 68, 68) 25%,
+    rgb(255, 52, 52) 50%,
+    rgb(255, 31, 31) 75%,
+    rgb(201, 0, 0) 100%);
   }
-  
   
   
