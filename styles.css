@@ -182,7 +182,7 @@ footer{
 /* down arrow*/
 .down-arrow {
     position: absolute;
-    top: calc(50rem - 4rem);
+    top: calc(55rem - 4rem);
     left: calc(40rem - 1rem);
     color: aliceblue;
   }
