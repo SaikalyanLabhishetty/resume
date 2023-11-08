@@ -311,6 +311,9 @@ footer{
         text-align: center;
         margin-left: 5rem;
     }
+    .image{
+        margin-left: 10%;
+    }
     /* skills bar */
 @keyframes javaProgress {
     from { width: 0; } 
