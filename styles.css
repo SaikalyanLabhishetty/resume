@@ -3,42 +3,53 @@ body{
     padding: 0;
     background-color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
-.header{
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 81rem;
+h1{
     text-align: center;
+    color: white;
+}
+header{
+    position: fixed;
     background-color: black;
+    width: 100%;
 }
 .progress-container {
     width: 81rem;
     height: 0.5rem;
     background: #ccc;
-  }
-  
+}
 .progress-bar {
     height: 0.5rem;
     background: #aa4604;
     width: 0%;
   }
-h1{
-    color: white;
-    text-align: center;
+.container{
+    display: flex;
+    flex-direction: row;
 }
-.item-quote{
-    grid-area: image;
-    font-size: 3rem;
-    background-color: transparent;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 43.75rem;
+.flex-container-1{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-top: 6rem;
 }
-.item-experience{
-    grid-area: experience;
+.flex-container-2{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-top: 6rem;
+    
+}
+.flex-container-3{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.image{
+    margin-left: 25%;
+}
+.experience{
     width: 13.75rem;
     background-color: coral;
     font-size: 2rem;
@@ -48,11 +59,7 @@ h1{
     border-radius: 1.2rem;
     cursor: pointer;
 }
-.item-headername{
-    grid-area: headername;
-}
-.item-projects {
-    grid-area: projects;
+.projects {
     width: 13.75rem;
     background-color: rgb(244, 62, 110);
     font-size: 2rem;
@@ -62,8 +69,7 @@ h1{
     border-radius: 1.2rem;
     cursor: pointer;
 }
-.item-certificates{
-    grid-area: certificates;
+.certificates{
     width: 13.75rem;
     background-color: #3eb489;
     font-size: 2rem;
@@ -73,55 +79,36 @@ h1{
     border-radius: 1.2rem;
     cursor: pointer;
 }
-/* .item-img{
-    grid-area: img;
-} */
-.item-skills{
-    grid-area: skills;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.certificates:hover{
+    background-color: transparent;
+    border: 0.1rem solid #3eb489;
 }
-.item-company{
-    grid-area: company;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.experience:hover{
+    background-color: transparent;
+    border: 0.1rem solid coral;
 }
-.item-skillsbar{
-    grid-area: skillsbar;
-    width: auto;
-
+.projects:hover{
+    background-color: transparent;
+    border: 0.1rem solid rgb(244, 62, 110);
 }
-.item-logos{
-    grid-area:logo ;
-
+.name{
+    margin-top:1rem ;
 }
-
-.grid-container{
-    padding: 1rem;
-    margin: 5.3rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 3fr;
-    grid-template-areas: 
-    'image image image skillsbar skillsbar skillsbar'
-    'image image image skillsbar skillsbar skillsbar'
-    'image image image skillsbar skillsbar skillsbar'
-    'headername headername headername skillsbar skillsbar skillsbar'
-    'company company company skillsbar skillsbar skillsbar'
-    'skills skills skills skillsbar skillsbar skillsbar'
-    'logo logo logo skillsbar skillsbar skillsbar'
-    'experience projects certificates skillsbar skillsbar skillsbar'
-    'experience projects certificates skillsbar skillsbar skillsbar';
-    gap: 0.7rem;
+.skills-flex{
+    margin-top:1rem ;
 }
-
-.grid-container > div {
-    color: white;
-  }
+.company{
+    margin-top: 1rem;
+}
 .linkedIN{
     background-color: transparent;
     border: 0.2rem solid #0A66C2;
     color: white;
     height: 2rem;
     cursor: pointer;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .github{
     background-color: transparent;
@@ -129,7 +116,9 @@ h1{
     color: white;
     height: 2rem;
     cursor: pointer;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .Download{
     background-color: transparent;
@@ -137,7 +126,9 @@ h1{
     color: white;
     height: 2rem;
     cursor: pointer;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .linkedIN:hover{
     background-color: #0A66C2;
@@ -155,18 +146,6 @@ h1{
     color: white;
     margin-top: 2rem;
 }
-.item-certificates:hover{
-    background-color: transparent;
-    border: 0.1rem solid #3eb489;
-}
-.item-experience:hover{
-    background-color: transparent;
-    border: 0.1rem solid coral;
-}
-.item-projects:hover{
-    background-color: transparent;
-    border: 0.1rem solid rgb(244, 62, 110);
-}
 .heading{
     text-align: center;
 }
@@ -179,52 +158,10 @@ footer{
     height: 0.3rem;
     width: auto;
 }
-/* down arrow*/
-.down-arrow {
-    position: absolute;
-    top: calc(55rem - 4rem);
-    left: calc(40rem - 1rem);
-    color: aliceblue;
-  }
-
-  @keyframes jumpInfinite {
-    0% {
-      margin-top: 0;
-    }
-    50% {
-      margin-top: 2rem;
-    }
-    100% {
-      margin-top: 0;
-    }
-  }
-  .down-arrow {
-     /* rest of the styles from above */
-    animation: jumpInfinite 1.5s infinite;
-  }
-/* scroll transitions */
-.hidden{
-    opacity: 0;
-    transition: all 1s;
-    transform: translateX(-5.3rem);
-    filter: blur(0.2rem);
-}
-.show{
-    opacity: 1;
-    filter: blur(0rem);
-    transform: translateX(0rem);
-}
-
-@media(prefers-reduced-motion) {
-    .hidden{
-        transition: none;
-    }
-}
-
 /* skills bar */
 @keyframes javaProgress {
     from { width: 0; } 
-    to { width: 75%; } 
+    to { width: 70%; } 
   }
   
   @keyframes webProgress {
@@ -249,9 +186,9 @@ footer{
   
   /* Define animations for other skills here */
   
-  .container {
-    width: 100%;
-    background-color: #ddd;
+  .skill-container {
+    width: 90%;
+    background-color: #ffffff;
   }
   
   .skills {
@@ -270,7 +207,7 @@ footer{
     rgb(0, 209, 0) 25%,
     rgb(0, 173, 0) 50%,
     rgb(0, 158, 0) 75%,
-    rgb(0, 125, 0) 100%);
+    rgb(0, 106, 0) 100%);
   }
   
   .web {
@@ -314,4 +251,157 @@ footer{
     rgb(201, 0, 0) 100%);
   }
   
+  @media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .experience{
+        width: 5.5rem;
+        height: 3rem;
+        background-color: coral;
+        font-size: 0.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+    .experience > svg{
+        height: 2rem;
+        width: 2rem;
+    }
+    .projects{
+        width: 5.5rem;
+        height: 3rem;
+        background-color: rgb(244, 62, 110);
+        font-size: 0.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+    .projects > svg{
+        height: 2rem;
+        width: 2rem;
+    }
+    .certificates{
+        width: 5.5rem;
+        height: 3rem;
+        background-color: #3eb489;
+        font-size: 0.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+    .certificates > svg{
+        height: 2rem;
+        width: 2rem;
+    }
+    .skill-container {
+        width: 200%;
+        background-color: #ffffff;
+      }
+    .flex-container-1{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 5rem;
+    }
+    /* skills bar */
+@keyframes javaProgress {
+    from { width: 0; } 
+    to { width: 70%; } 
+  }
   
+  @keyframes webProgress {
+    from { width: 0; }
+    to { width: 70%; }
+  }
+  
+  @keyframes jsProgress {
+    from { width: 0; }
+    to { width: 60%; }
+  }
+  
+  @keyframes mysqlProgress {
+    from { width: 0; }
+    to { width: 70%; }
+  }
+
+  @keyframes ctProgress {
+    from { width: 0; }
+    to { width: 65%; }
+  }
+  
+  /* Define animations for other skills here */
+  
+  .skill-container {
+    width: 200%;
+    background-color: #ffffff;
+  }
+  
+  .skills {
+    text-align: right;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: white;
+    width: 0; 
+    animation: progress 3s ease-in-out forwards; 
+  }
+  
+  .java {
+    animation: javaProgress 3s ease-in-out forwards; 
+    background: linear-gradient(45deg,
+    rgb(1, 255, 1) 0%,
+    rgb(0, 209, 0) 25%,
+    rgb(0, 173, 0) 50%,
+    rgb(0, 158, 0) 75%,
+    rgb(0, 106, 0) 100%);
+  }
+  
+  .web {
+    animation: webProgress 3s ease-in-out forwards; 
+    background: linear-gradient(45deg,
+    rgb(1, 120, 255) 0%,
+    rgb(1, 101, 214) 25%,
+    rgb(1, 80, 171) 50%,
+    rgb(0, 72, 153) 75%,
+    rgb(0, 55, 118) 100%);
+  }
+  
+  
+  .js {
+    animation: jsProgress 3s ease-in-out forwards; 
+    background: linear-gradient(45deg,
+    rgb(255, 183, 0) 0%,
+    rgb(218, 156, 0) 25%,
+    rgb(192, 138, 0) 50%,
+    rgb(159, 114, 0) 75%,
+    rgb(141, 101, 0) 100%);
+  }
+  
+  .mysql{
+    animation: mysqlProgress 3s ease-in-out forwards; 
+    background: linear-gradient(45deg,
+    rgb(251, 129, 255) 0%,
+    rgb(250, 109, 255) 25%,
+    rgb(249, 79, 255) 50%,
+    rgb(248, 31, 255) 75%,
+    rgb(195, 0, 201) 100%);
+  }
+
+  .ct{
+    animation: ctProgress 3s ease-in-out forwards; 
+    background: linear-gradient(45deg,
+    rgb(255, 95, 95) 0%,
+    rgb(255, 68, 68) 25%,
+    rgb(255, 52, 52) 50%,
+    rgb(255, 31, 31) 75%,
+    rgb(201, 0, 0) 100%);
+  }
+    
+}
